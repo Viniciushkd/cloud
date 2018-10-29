@@ -23,7 +23,7 @@ load('models')
   .then('routes')
   .into(app);
 
-var porta = process.env.PORT || 5000;
+var port = process.env.PORT || 5000;
 app.set('port', port);
 
 module.exports = app;
