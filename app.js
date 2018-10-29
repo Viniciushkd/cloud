@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var expressSession = require('express-session');
 
 var router = express.Router();
-var porta = process.env.PORT || 8080;
 
 app = express();
 
@@ -24,4 +23,9 @@ load('models')
   .then('routes')
   .into(app);
 
-  app.listen(porta);
+var porta = process.env.PORT || 3000;
+app.set('port', port);
+
+app.listen(app.get('port'), function(){
+
+});
